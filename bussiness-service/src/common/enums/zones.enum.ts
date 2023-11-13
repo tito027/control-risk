@@ -1,0 +1,5 @@
+export enum ZonesEnum {
+  OCCIDENTAL = 'OCCIDENTAL',
+  ORIENTAL = 'ORIENTAL',
+  CENTRAL = 'CENTRAL',
+}
