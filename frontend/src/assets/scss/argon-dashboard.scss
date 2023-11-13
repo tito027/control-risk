@@ -1,0 +1,122 @@
+// =========================================================
+// * Vue Argon Dashboard 2 Pro - v3.0.0
+// =========================================================
+//
+// * Product Page: https://www.creative-tim.com/product/vue-argon-dashboard-pro
+// * Copyright 2022 Creative Tim (https://www.creative-tim.com)
+//
+// Coded by www.creative-tim.com
+//
+// =========================================================
+//
+// * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": #000066,
+    ),
+  )
+);
+@use "element-plus/theme-chalk/src/index.scss" as *;
+// Bootstrap Functions
+@import "argon-dashboard/bootstrap/functions";
+@import "argon-dashboard/bootstrap/variables";
+@import "argon-dashboard/bootstrap/mixins";
+// Custom Variables
+@import "argon-dashboard/custom/variables";
+// Theme Variables
+@import "argon-dashboard/variables";
+@import "argon-dashboard/bootstrap/utilities/api";
+// Bootstrap Core
+
+$utilities: map-merge(
+  (),
+  (
+    "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values:
+        map-merge(
+          map-get(map-get($utilities, "font-size"), "values"),
+          (
+            7: 0.8rem,
+            8: 0.65rem,
+          )
+        ),
+    ),
+    "viewport-width": (
+      property: width,
+      responsive: true,
+      class: vw,
+      values: (
+        25: 25vw,
+        50: 50vw,
+        75: 75vw,
+        100: 100vw,
+      ),
+    ),
+    "viewport-height": (
+      property: height,
+      responsive: true,
+      class: vh,
+      values: (
+        25: 25vh,
+        50: 50vh,
+        75: 75vh,
+        100: 100vh,
+      ),
+    ),
+    "max-viewport-height": (
+      property: max-height,
+      responsive: true,
+      class: max-vh,
+      values: (
+        25: 25vh,
+        50: 50vh,
+        75: 75vh,
+        100: 100vh,
+      ),
+    ),
+    "max-height": (
+      property: max-height,
+      responsive: true,
+      class: mh,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+      ),
+    ),
+    "max-width": (
+      property: max-width,
+      responsive: true,
+      class: mw,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+      ),
+    ),
+    "max-viewport-width": (
+      property: max-width,
+      responsive: true,
+      class: max-vw,
+      values: (
+        25: 25vw,
+        50: 50vw,
+        75: 75vw,
+        100: 100vw,
+      ),
+    ),
+  )
+);
+
+@import "argon-dashboard/bootstrap/bootstrap";
+// Theme Core
+@import "argon-dashboard/theme-pro";
+// Custom Variables
+@import "argon-dashboard/custom/styles";
+@import "custom/index";
